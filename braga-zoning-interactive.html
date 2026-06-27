@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Braga Zoning Plan — Legend (English)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f6f5f0;
+    --card:#ffffff;
+    --ink:#1b1e22;
+    --ink-soft:#52585f;
+    --ink-faint:#8b9098;
+    --line:#dcdad2;
+    --line-strong:#c3c0b6;
+    --accent:#cf3024;
+    --accent-soft:#f5e3e0;
+    --display:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--display);
+    font-size:15px;
+    line-height:1.45;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+
+  /* ---- Masthead ---- */
+  header.masthead{
+    border-bottom:2px solid var(--ink);
+    padding:34px 28px 22px;
+    max-width:1180px;
+    margin:0 auto;
+  }
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin:0 0 12px;
+  }
+  h1.title{
+    font-size:clamp(28px,5vw,46px);
+    font-weight:700;
+    letter-spacing:-.02em;
+    line-height:1.02;
+    margin:0 0 10px;
+  }
+  .sub{
+    color:var(--ink-soft);
+    max-width:62ch;
+    font-size:15px;
+    margin:0 0 4px;
+  }
+  .meta-line{
+    font-family:var(--mono);
+    font-size:11.5px;
+    color:var(--ink-faint);
+    margin-top:14px;
+    letter-spacing:.02em;
+  }
+
+  /* ---- Sticky control bar ---- */
+  .controls{
+    position:sticky;
+    top:0;
+    z-index:30;
+    background:rgba(246,245,240,.94);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line-strong);
+  }
+  .controls-inner{
+    max-width:1180px;
+    margin:0 auto;
+    padding:12px 28px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 14px;
+    align-items:center;
+  }
+  .search-wrap{flex:1 1 260px;position:relative;min-width:200px;}
+  .search-wrap input{
+    width:100%;
+    font-family:var(--mono);
+    font-size:13px;
+    padding:9px 12px 9px 34px;
+    border:1px solid var(--line-strong);
+    border-radius:2px;
+    background:var(--card);
+    color:var(--ink);
+    outline:none;
+  }
+  .search-wrap input:focus{border-color:var(--accent);}
+  .search-wrap svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);opacity:.45;}
+  nav.jump{display:flex;flex-wrap:wrap;gap:6px;}
+  nav.jump a{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    text-decoration:none;
+    padding:7px 10px;
+    border:1px solid var(--line-strong);
+    border-radius:2px;
+    color:var(--ink-soft);
+    white-space:nowrap;
+  }
+  nav.jump a:hover{border-color:var(--ink);color:var(--ink);}
+  .toggle{
+    display:inline-flex;align-items:center;gap:7px;
+    font-family:var(--mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase;
+    color:var(--ink-soft);cursor:pointer;user-select:none;
+    padding:7px 10px;border:1px solid var(--line-strong);border-radius:2px;background:var(--card);
+  }
+  .toggle.on{border-color:var(--ink);color:var(--ink);}
+  .btn{
+    font-family:var(--mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase;
+    color:var(--ink-soft);cursor:pointer;padding:7px 10px;border:1px solid var(--line-strong);
+    border-radius:2px;background:var(--card);
+  }
+  .btn:hover{border-color:var(--ink);color:var(--ink);}
+
+  /* ---- Main ---- */
+  main{max-width:1180px;margin:0 auto;padding:8px 28px 80px;}
+
+  section.page{margin-top:46px;scroll-margin-top:70px;}
+  .page-head{display:flex;align-items:baseline;gap:14px;border-bottom:2px solid var(--ink);padding-bottom:8px;margin-bottom:6px;}
+  .page-num{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--accent);}
+  .page-title{font-size:21px;font-weight:700;letter-spacing:-.01em;margin:0;}
+  .page-pt{font-family:var(--mono);font-size:11px;color:var(--ink-faint);letter-spacing:.04em;margin-left:auto;text-align:right;}
+
+  .group{margin-top:24px;}
+  .group-title{
+    font-family:var(--mono);
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--ink);
+    margin:0 0 2px;
+    display:flex;flex-wrap:wrap;gap:8px;align-items:baseline;
+  }
+  .group-pt{font-weight:400;color:var(--ink-faint);text-transform:none;letter-spacing:.01em;}
+  .group-rule{height:1px;background:var(--line);margin:8px 0 4px;}
+
+  .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px;}
+  @media(max-width:720px){.grid{grid-template-columns:1fr;}}
+
+  .item{
+    display:grid;
+    grid-template-columns:52px 1fr;
+    gap:14px;
+    align-items:center;
+    padding:11px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .swatch{
+    width:48px;height:30px;border-radius:2px;
+    border:1px solid var(--line-strong);
+    background:var(--card);
+    position:relative;overflow:hidden;
+    display:flex;align-items:center;justify-content:center;
+    font-size:16px;
+  }
+  .en{font-weight:600;font-size:14.5px;line-height:1.25;}
+  .code{font-family:var(--mono);font-weight:600;color:var(--accent);}
+  .pt{font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);margin-top:2px;line-height:1.3;}
+  body.hide-pt .pt{display:none;}
+
+  /* ---- Exclusions table ---- */
+  .table-wrap{overflow-x:auto;margin-top:14px;border:1px solid var(--line-strong);border-radius:2px;}
+  table{border-collapse:collapse;width:100%;font-size:13px;min-width:640px;}
+  caption{
+    text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--ink-soft);padding:10px 12px;background:var(--paper);border-bottom:1px solid var(--line-strong);
+  }
+  th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;}
+  thead th{font-family:var(--mono);font-size:11px;letter-spacing:.03em;text-transform:uppercase;color:var(--ink-soft);background:var(--paper);}
+  tbody td:first-child{font-family:var(--mono);font-weight:600;color:var(--accent);}
+  tbody tr:last-child td{border-bottom:none;}
+
+  /* ---- Reference block ---- */
+  .refcard{
+    margin-top:46px;background:var(--card);border:1px solid var(--line-strong);border-radius:3px;
+    padding:24px 26px;scroll-margin-top:70px;
+  }
+  .refcard h2{font-size:18px;font-weight:700;margin:0 0 4px;}
+  .refcard .group-pt{display:block;margin-bottom:18px;}
+  .ref-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px 32px;}
+  .ref-item dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);}
+  .ref-item dd{margin:2px 0 0;font-size:13.5px;}
+  .ref-item dd .pt-inline{display:block;font-family:var(--mono);font-size:11px;color:var(--ink-faint);}
+  body.hide-pt .pt-inline{display:none;}
+
+  .note{font-size:12.5px;color:var(--ink-soft);margin-top:10px;font-style:italic;}
+
+  footer{max-width:1180px;margin:0 auto;padding:30px 28px 50px;border-top:1px solid var(--line);
+    font-family:var(--mono);font-size:11px;color:var(--ink-faint);letter-spacing:.02em;}
+
+  .empty{display:none;padding:40px 0;text-align:center;color:var(--ink-faint);font-family:var(--mono);font-size:13px;}
+  .group.hidden,.item.hidden,.page.hidden{display:none;}
+
+  @media print{
+    .controls{display:none;}
+    body{background:#fff;}
+    .item,.group{break-inside:avoid;}
+  }
+</style>
+</head>
+<body>
+<header class="masthead">
+  <p class="eyebrow">Plano Diretor Municipal de Braga &middot; Cartographic Legend</p>
+  <h1 class="title">Braga Zoning Plan — Legend in English</h1>
+  <p class="sub">A full translation of the four legend sheets that accompany the municipal land-use map for your plot. Every symbol keeps its original Portuguese term and classification code beneath the English reading.</p>
+  <p class="meta-line">Source map: Câmara Municipal de Braga &middot; National Cartographic Series 1:10,000 &middot; Edition 08/2013</p>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="search-wrap">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
+      <input id="search" type="text" placeholder="Search English, Portuguese or code…" autocomplete="off">
+    </div>
+    <nav class="jump">
+      <a href="#p1">Infrastructures</a>
+      <a href="#p2">Natural Resources</a>
+      <a href="#p3">Road & Limits</a>
+      <a href="#p4">Land Use</a>
+      <a href="#ref">Map Reference</a>
+    </nav>
+    <button class="toggle on" id="ptToggle" aria-pressed="true">Portuguese: On</button>
+    <button class="btn" id="printBtn">Print / PDF</button>
+  </div>
+</div>
+
+<main id="main"><div class="empty" id="empty">No symbols match that search.</div></main>
+
+<footer>
+  Translation reference generated for plot interpretation. Original cartography © Câmara Municipal de Braga. Terms follow standard PDM / IGT planning vocabulary; codes (e.g. ER2, AE1, EV3) are official land-use classifications and are kept verbatim.
+</footer>
+
+<script>
+/* ---------- swatch rendering ---------- */
+function swatch(spec){
+  const s=document.createElement('div');
+  s.className='swatch';
+  if(!spec){return s;}
+  const t=spec.t, c=spec.c||'#888', c2=spec.c2;
+  if(t==='fill'){s.style.background=c;s.style.borderColor=shade(c);}
+  else if(t==='outline'){s.style.background='#fff';s.style.border='2px solid '+c;}
+  else if(t==='dashoutline'){s.style.background=spec.fill||'#fff';s.style.border='2px dashed '+c;}
+  else if(t==='hatch'){s.style.background=`repeating-linear-gradient(45deg, ${c} 0 2px, #fff 2px 5px)`;}
+  else if(t==='vhatch'){s.style.background=`repeating-linear-gradient(90deg, ${c} 0 2px, #fff 2px 5px)`;}
+  else if(t==='grid'){s.style.background=`repeating-linear-gradient(0deg, ${c} 0 1.5px, #fff 1.5px 6px), repeating-linear-gradient(90deg, ${c} 0 1.5px, transparent 1.5px 6px)`;}
+  else if(t==='dots'){s.style.background=`radial-gradient(${c} 1.4px, ${spec.fill||'#fff'} 1.5px)`;s.style.backgroundSize='6px 6px';}
+  else if(t==='wave'){s.style.background=spec.fill||'#fff';s.innerHTML=`<svg width="46" height="28" viewBox="0 0 46 28" preserveAspectRatio="none"><g stroke="${c}" stroke-width="1.3" fill="none"><path d="M0 8 q5 -4 10 0 t10 0 t10 0 t10 0"/><path d="M0 16 q5 -4 10 0 t10 0 t10 0 t10 0"/><path d="M0 24 q5 -4 10 0 t10 0 t10 0 t10 0"/></g></svg>`;}
+  else if(t==='line'){s.innerHTML=lineSVG(spec);}
+  else if(t==='icon'){s.textContent=spec.ic||'•';s.style.fontSize=(spec.sz||16)+'px';}
+  return s;
+}
+function lineSVG(spec){
+  const c=spec.c||'#000', w=spec.w||2.5, dash=spec.dash||'', mark=spec.mark||'';
+  let extra='';
+  if(mark==='ticks'){extra=`<g stroke="${c}" stroke-width="${w}">${[8,18,28,38].map(x=>`<line x1="${x}" y1="9" x2="${x}" y2="21"/>`).join('')}</g>`;}
+  if(mark==='x'){extra=`<g stroke="${c}" stroke-width="1.6">${[12,23,34].map(x=>`<line x1="${x-3}" y1="11" x2="${x+3}" y2="17"/><line x1="${x-3}" y1="17" x2="${x+3}" y2="11"/>`).join('')}</g>`;}
+  if(mark==='dot'){extra=`<g fill="${c}">${[10,23,36].map(x=>`<circle cx="${x}" cy="15" r="2.4"/>`).join('')}</g>`;}
+  if(mark==='dotdash'){return `<svg width="46" height="30" viewBox="0 0 46 30"><line x1="2" y1="15" x2="44" y2="15" stroke="${c}" stroke-width="${w}" stroke-dasharray="7 3 1.5 3"/></svg>`;}
+  return `<svg width="46" height="30" viewBox="0 0 46 30"><line x1="2" y1="15" x2="44" y2="15" stroke="${c}" stroke-width="${w}" ${dash?`stroke-dasharray="${dash}"`:''}/>${extra}</svg>`;
+}
+function shade(hex){ // darken a hex for border
+  try{let n=parseInt(hex.slice(1),16);let r=(n>>16)&255,g=(n>>8)&255,b=n&255;
+    r=Math.max(0,r-40);g=Math.max(0,g-40);b=Math.max(0,b-40);
+    return '#'+[r,g,b].map(v=>v.toString(16).padStart(2,'0')).join('');}catch(e){return '#bbb';}
+}
+
+/* ---------- data ---------- */
+const DATA=[
+ {id:'p1',num:'01',title:'Infrastructures',pt:'Infraestruturas',groups:[
+  {g:'Electrical Network',gp:'Rede Eléctrica',items:[
+   {en:'Energy Transport Infrastructure',pt:'Infraestrutura de Transporte de Energia',sw:{t:'line',c:'#cf3024',mark:'x'}},
+   {en:'Energy Production Infrastructure',pt:'Infraestrutura de Produção de Energia',sw:{t:'icon',ic:'◆',c:'#cf3024'},style:'red'},
+   {en:'Energy Transformation Infrastructure',pt:'Infraestrutura de Transformação de Energia',sw:{t:'icon',ic:'⚡'}},
+  ]},
+  {g:'Gas Pipeline',gp:'Gasoduto',items:[
+   {en:'Gas Pipeline',pt:'Gasoduto',sw:{t:'line',c:'#444',dash:'6 3',mark:'dot'}},
+   {en:'Associated Infrastructure',pt:'Infraestruturas Associadas',sw:{t:'icon',ic:'✕'}},
+  ]},
+  {g:'National Road Network — Fundamental Network',gp:'Rede Rodoviária Nacional — Rede Fundamental',items:[
+   {en:'Main Itinerary — Motorway',pt:'Itinerário Principal Auto-Estrada',sw:{t:'line',c:'#e11d12',w:4}},
+  ]},
+  {g:'National Road Network — Complementary Network',gp:'Rede Rodoviária Nacional — Rede Complementar',items:[
+   {en:'Complementary Itinerary — Motorway',pt:'Itinerário Complementar Auto-Estrada',sw:{t:'line',c:'#e11d12',w:4,dash:'7 4'}},
+   {en:'National Road',pt:'Estrada Nacional',sw:{t:'line',c:'#f0a23a',w:3}},
+  ]},
+  {g:'Regional Roads',gp:'Estradas Regionais',items:[
+   {en:'Regional Road',pt:'Estrada Regional',sw:{t:'line',c:'#9a7b3a',w:2.5,dash:'8 5'}},
+  ]},
+  {g:'Declassified Roads',gp:'Estradas Desclassificadas',items:[
+   {en:'National Roads Declassified, under E.P. jurisdiction',pt:'Estradas Nacionais Desclassificadas Sob a Jurisdição da E.P.',sw:{t:'line',c:'#f0a23a',w:2.5,dash:'6 4'}},
+  ]},
+  {g:'Municipal Road Network',gp:'Rede Rodoviária Municipal',items:[
+   {en:'National Roads Declassified, transferred to Municipal assets',pt:'Estradas Nacionais Desclassificadas Integradas no Património da Câmara Municipal',sw:{t:'line',c:'#b13a2e',w:2.5,dash:'6 4'}},
+   {en:'Municipal Roads and Paths',pt:'Estradas e Caminhos Municipais',sw:{t:'line',c:'#333',w:2.5,mark:'dotdash'}},
+  ]},
+  {g:'Channel Space (reserved corridor)',gp:'Espaço Canal',items:[
+   {en:'Channel Space — EN103 Variant',pt:'Espaço Canal - Variante à EN103',sw:{t:'dashoutline',c:'#c245b0'}},
+  ]},
+  {g:'Railway Network',gp:'Rede Ferroviária',items:[
+   {en:'Railway Track',pt:'Via Férrea',sw:{t:'line',c:'#222',w:2.5,mark:'ticks'}},
+  ]},
+  {g:'Geodesic Markers',gp:'Marcos Geodésicos',items:[
+   {en:'Geodesic (survey) Marker',pt:'Marco Geodésico',sw:{t:'icon',ic:'△'}},
+   {en:'Protection Zone',pt:'Zona de Proteção',sw:{t:'icon',ic:'⬭'}},
+  ]},
+  {g:'Establishments with Hazardous Substances',gp:'Estabelecimentos com Substâncias Perigosas',items:[
+   {en:'Establishment with Hazardous Substances',pt:'Estabelecimento com Substâncias Perigosas',sw:{t:'icon',ic:'⬡',c:'#cf3024'},style:'red'},
+   {en:'Municipality Boundary (CAOP 2014)',pt:'Limite do Concelho (CAOP 2014)',sw:{t:'line',c:'#222',w:2.5,mark:'dotdash'}},
+  ]},
+ ]},
+
+ {id:'p2',num:'02',title:'Natural Resources, Built Heritage & Public Buildings',pt:'Recursos Naturais, Património Edificado e Edifícios Públicos',groups:[
+  {g:'Water Resources',gp:'Recursos Hídricos',items:[
+   {en:'Floodable or Flood-Threatened Zones',pt:'Zonas Inundáveis ou Ameaçadas pelas Cheias',sw:{t:'hatch',c:'#cf3024'}},
+   {en:'Reservoir Full-Storage Level',pt:'Nível de Pleno Armazenamento da Albufeira',sw:{t:'fill',c:'#3a3f8f'}},
+   {en:'Reserved Zone of the Reservoir Terrestrial Protection Zone',pt:'Zona Reservada da Zona Terrestre de Proteção da Albufeira',sw:{t:'fill',c:'#f3e98c'}},
+   {en:'Reservoir Terrestrial Protection Zone',pt:'Zona Terrestre de Proteção da Albufeira',sw:{t:'wave',c:'#3a6fb0',fill:'#e8eef7'}},
+   {en:'Riverbed (fluvial waters)',pt:'Leito das Águas Fluviais',sw:{t:'line',c:'#2b66a8',w:2}},
+   {en:'Riverbed — Schematic Layout',pt:'Leito das Águas Fluviais - Traçado Esquemático',sw:{t:'line',c:'#7fb0d8',w:1.6}},
+   {en:'Bed & Margin of Fluvial Waters (REN)',pt:'Leito e Margem das Águas Fluviais (REN)',sw:{t:'line',c:'#2f8ed6',w:4}},
+   {en:'Piped Watercourses',pt:'Linhas de Água Entubadas',sw:{t:'line',c:'#3a6fb0',w:2,dash:'6 4'}},
+  ]},
+  {g:'Geological Resources',gp:'Recursos Geológicos',items:[
+   {en:'Private-Domain Exploitation Licenses — Quarries',pt:'Licenças de Exploração do Domínio Privado - Pedreiras',sw:{t:'hatch',c:'#c9a23a'}},
+  ]},
+  {g:'Agricultural & Forest Resources',gp:'Recursos Agrícolas e Florestais',items:[
+   {en:'RAN — National Agricultural Reserve',pt:'RAN - Reserva Agrícola Nacional',sw:{t:'vhatch',c:'#2f8f4e'}},
+   {en:'Forest Regime',pt:'Regime Florestal',sw:{t:'dots',c:'#2f7a45',fill:'#eef5ee'}},
+   {en:'Lookout / Watch Post',pt:'Posto de Vigia',sw:{t:'icon',ic:'🛗',c:'#cf3024'},style:'red'},
+   {en:'Trees & Woodland of Public Interest',pt:'Árvores e Arvoredo de Interesse Público',sw:{t:'icon',ic:'🌳'}},
+  ]},
+  {g:'Ecological Resources',gp:'Recursos Ecológicos',items:[
+   {en:'REN — National Ecological Reserve',pt:'REN - Reserva Ecológica Nacional',sw:{t:'grid',c:'#3a9b57'}},
+   {en:'Area Excluded from the National Ecological Reserve',pt:'Área Excluída da Reserva Ecológica Nacional',sw:{t:'grid',c:'#cf3024'}},
+  ]},
+  {g:'Classified Architectural Heritage',gp:'Património Arquitetónico Classificado',items:[
+   {en:'Monument of National Interest',pt:'Monumento de Interesse Nacional',sw:{t:'fill',c:'#e89ad6'}},
+   {en:'Property of Public Interest',pt:'Imóvel de Interesse Público',sw:{t:'fill',c:'#e3221c'}},
+   {en:'Property of Municipal Interest',pt:'Imóvel de Interesse Municipal',sw:{t:'fill',c:'#aee0a6'}},
+   {en:'Property Undergoing Classification',pt:'Imóvel em Vias de Classificação',sw:{t:'fill',c:'#f0a23a'}},
+   {en:'General Protection Zone',pt:'Zona Geral de Proteção',sw:{t:'outline',c:'#9a4fb0'}},
+   {en:'Special Protection Zone',pt:'Zona Especial de Proteção',sw:{t:'dashoutline',c:'#2b3fb0',fill:'#f3e98c'}},
+   {en:'Non Aedificandi Zone (no-build)',pt:'Zona Non Aedificandi',sw:{t:'dashoutline',c:'#2b3fb0'}},
+  ]},
+  {g:'Classified Archaeological Heritage',gp:'Património Arqueológico Classificado',items:[
+   {en:'Special Protection Zone — National Monument',pt:'Zona Especial de Proteção - Monumento Nacional',sw:{t:'grid',c:'#cf3024'}},
+   {en:'Special Protection Zone — Public Interest',pt:'Zona Especial de Proteção - Interesse Público',sw:{t:'grid',c:'#9a8a2a'}},
+  ]},
+  {g:'Prison & Juvenile Detention Establishments',gp:'Estabelecimentos Prisionais e Tutelares de Menores',items:[
+   {en:'Prison or Juvenile Detention Establishment',pt:'Estabelecimento Prisional ou Tutelar de Menores',sw:{t:'outline',c:'#caa23a'}},
+   {en:'Protection Zone',pt:'Zona de Proteção',sw:{t:'dots',c:'#caa23a',fill:'#fff'}},
+  ]},
+  {g:'National Defense',gp:'Defesa Nacional',items:[
+   {en:'Installation for Military Operations',pt:'Instalação Afeta à Realização de Operações Militares',sw:{t:'outline',c:'#222'}},
+   {en:'Easement Zone',pt:'Zona de Servidão',sw:{t:'grid',c:'#777'}},
+  ]},
+ ]},
+
+ {id:'p3',num:'03',title:'Road Infrastructure & Limits',pt:'Infraestruturas Viárias e Limites',groups:[
+  {g:'Road Network — Existing',gp:'Rede Rodoviária — Existente',items:[
+   {en:'Road Infrastructure',pt:'Infraestruturas Viárias',sw:{t:'line',c:'#8a8a8a',w:6}},
+  ]},
+  {g:'Road Network — Proposed',gp:'Rede Rodoviária — Proposta',items:[
+   {en:'Proposed Distributor Road Network',pt:'Rede Rodoviária Distribuidora Proposta',sw:{t:'line',c:'#cf3024',w:3,dash:'6 3'}},
+   {en:'Proposed Local Road Network',pt:'Rede Rodoviária Local Proposta',sw:{t:'line',c:'#222',w:2.5,dash:'7 4'}},
+   {en:'Road Infrastructure (proposed)',pt:'Infraestruturas Viárias',sw:{t:'grid',c:'#8a8a8a'}},
+  ]},
+  {g:'Railway Network — Existing',gp:'Rede Ferroviária — Existente',items:[
+   {en:'Railway Infrastructure',pt:'Infraestruturas Ferroviárias',sw:{t:'line',c:'#3a3a3a',w:6}},
+  ]},
+  {g:'Railway Network — Proposed',gp:'Rede Ferroviária — Proposta',items:[
+   {en:'Proposed High-Speed Railway',pt:'Rede Ferroviária de Alta Velocidade Proposta',sw:{t:'line',c:'#caa23a',w:2.5,mark:'ticks'}},
+  ]},
+  {g:'Limits & Networks',gp:'Limites',items:[
+   {en:'Surface Watercourses',pt:'Linhas de Água à Superfície',sw:{t:'line',c:'#2f8ed6',w:2.5}},
+   {en:'Piped Watercourses',pt:'Linhas de Água Entubadas',sw:{t:'line',c:'#7fb0d8',w:2,dash:'6 4'}},
+   {en:'High-Level Water Supply Network — AGERE',pt:'Rede de Abastecimento de Águas em Alta - AGERE',sw:{t:'line',c:'#9a3aa0',w:2,mark:'dot'}},
+   {en:'High-Level Wastewater Network — AGERE',pt:'Rede de Águas Residuais em Alta - AGERE',sw:{t:'line',c:'#9a3aa0',w:2,dash:'5 3'}},
+   {en:'Supply / Pumping Main',pt:'Conduta Adutora/Elevatória',sw:{t:'line',c:'#9a3aa0',w:2,mark:'dot'}},
+   {en:'Pumping Main / Wastewater Outfall',pt:'Conduta Elevatória/Emissário de Águas Residuais',sw:{t:'line',c:'#c245b0',w:2.5,mark:'ticks'}},
+   {en:'Supply / Pumping Main — Under Construction',pt:'Conduta Adutora/Elevatória Em Construção',sw:{t:'line',c:'#9a3aa0',w:2,dash:'4 3'}},
+   {en:'Floodable or Flood-Threatened Zones',pt:'Zonas Inundáveis ou Ameaçadas pelas Cheias',sw:{t:'vhatch',c:'#cf3024'}},
+   {en:'UOPG — Operative Planning & Management Unit',pt:'UOPG - Unidade Operativa de Planeamento e Gestão',sw:{t:'outline',c:'#222'}},
+   {en:'PPPMP — Monte Picoto Park Detailed Plan',pt:'PPPMP - Plano de Pormenor do Parque do Monte Picoto',sw:{t:'outline',c:'#2b3fb0'}},
+   {en:'PPGT — Tibães Golf Detailed Plan',pt:'PPGT - Plano de Pormenor do Golfe Tibães',sw:{t:'dashoutline',c:'#555'}},
+   {en:'Channel Space',pt:'Espaço Canal',sw:{t:'dashoutline',c:'#c245b0'}},
+   {en:'Municipality Boundary (CAOP 2014)',pt:'Limite de Concelho (CAOP 2014)',sw:{t:'line',c:'#222',w:2.5,mark:'dotdash'}},
+  ]},
+ ]},
+
+ {id:'p4',num:'04',title:'Land-Use Classification',pt:'Classificação e Qualificação do Solo',groups:[
+  {g:'RURAL LAND — Agricultural Spaces',gp:'Solo Rural — Espaços Agrícolas',items:[
+   {en:'A — Agricultural Spaces',pt:'A - Espaços Agrícolas',code:'A',sw:{t:'fill',c:'#9ed27e'}},
+  ]},
+  {g:'Rural Land — Forest Spaces',gp:'Espaços Florestais',items:[
+   {en:'FPT — Protection Forest Spaces',pt:'FPT - Espaços Florestais de Proteção',code:'FPT',sw:{t:'grid',c:'#3a8f4e'}},
+   {en:'FREP — Forest Spaces for Recreation, Framing & Landscape Aesthetics',pt:'FREP - Espaços Florestais de Recreio, Enquadramento e Estética da Paisagem',code:'FREP',sw:{t:'hatch',c:'#3a8f4e'}},
+   {en:'FPP — Production Forest Spaces',pt:'FPP - Espaços Florestais de Produção',code:'FPP',sw:{t:'dots',c:'#3a7a45',fill:'#dff0db'}},
+  ]},
+  {g:'Rural Land — Mixed-Use Agricultural & Forest',gp:'Espaço de Uso Múltiplo Agrícola e Florestal',items:[
+   {en:'M — Mixed-Use Agricultural & Forest Space',pt:'M - Espaço de Uso Múltiplo Agrícola e Florestal',code:'M',sw:{t:'fill',c:'#d7ecc8'}},
+  ]},
+  {g:'Rural Land — Geological-Resource Exploitation',gp:'Espaços Afetos à Exploração de Recursos Geológicos',items:[
+   {en:'G1 — Consolidated Exploitation Spaces',pt:'G1 - Espaços de Exploração Consolidada',code:'G1',sw:{t:'vhatch',c:'#d4622a'}},
+   {en:'G2 — Spaces to be Rehabilitated',pt:'G2 - Espaços a Recuperar',code:'G2',sw:{t:'hatch',c:'#cf3024'}},
+  ]},
+  {g:'Rural Land — Natural Spaces',gp:'Espaços Naturais',items:[
+   {en:'Nca — Watercourse Beds',pt:'Nca - Leitos de Cursos de Água',code:'Nca',sw:{t:'fill',c:'#bfe0ef'}},
+   {en:'Nar — Rocky Outcrops',pt:'Nar - Afloramentos Rochosos',code:'Nar',sw:{t:'grid',c:'#9a8f7a'}},
+  ]},
+  {g:'Rural Land — Facilities & Structures Compatible with Rural Status',gp:'Espaço destinado a Equipamentos e Outras Estruturas ou Ocupações Compatíveis com o Estatuto de Solo Rural',items:[
+   {en:'EI1 — Facilities / Equipment',pt:'EI1 - Equipamentos',code:'EI1',sw:{t:'grid',c:'#caa23a',fill:'#f3e6b8'}},
+   {en:'EI2 — Infrastructure',pt:'EI2 - Infraestruturas',code:'EI2',sw:{t:'grid',c:'#8a5a3a',fill:'#c8a07a'}},
+  ]},
+  {g:'Rural Land — Other Categories',gp:'Outras Categorias de Solo Rural',items:[
+   {en:'ED — Dispersed Building Areas',pt:'ED - Áreas de Edificação Dispersa',code:'ED',sw:{t:'outline',c:'#2b6fb0'}},
+   {en:'AR — Rural Settlements',pt:'AR - Aglomerados Rurais',code:'AR',sw:{t:'outline',c:'#b07a3a'}},
+   {en:'C — Cultural Space',pt:'C - Espaço Cultural',code:'C',sw:{t:'fill',c:'#e07ad0'}},
+   {en:'T — Tourist Occupation Space',pt:'T - Espaço de Ocupação Turística',code:'T',sw:{t:'wave',c:'#c245b0',fill:'#f3d8ee'}},
+  ]},
+  {g:'URBAN LAND (Urbanized / Urbanizable) — Central Space',gp:'Solo Urbano (Urbanizado / Urbanizável) — Espaço Central',items:[
+   {en:'EC1 — Central Space',pt:'EC1 - Espaço Central',code:'EC1',sw:{t:'fill',c:'#9b86c4'}},
+  ]},
+  {g:'Urban Land — Residential Spaces',gp:'Espaços Residenciais',note:'IU = Utilization Index (floor-area ratio), in m²/m².',items:[
+   {en:'ER1',pt:'ER1',code:'ER1',sw:{t:'fill',c:'#2d4f8f'}},
+   {en:'ER2 — Max. Utilization Index 1.4 m²/m²',pt:'ER2 - IU máximo 1.4 m2/m2',code:'ER2',sw:{t:'fill',c:'#3a7cc4'}},
+   {en:'ER3 — Max. Utilization Index 1.1 m²/m²',pt:'ER3 - IU máximo 1.1 m2/m2',code:'ER3',sw:{t:'fill',c:'#5fa0d8'}},
+   {en:'ER4 — Max. Utilization Index 0.75 m²/m²',pt:'ER4 - IU máximo 0.75 m2/m2',code:'ER4',sw:{t:'fill',c:'#9cc6e8'}},
+   {en:'ER5 — Max. Utilization Index 0.6 m²/m²',pt:'ER5 - IU máximo 0.6 m2/m2',code:'ER5',sw:{t:'fill',c:'#cfe4f3'}},
+  ]},
+  {g:'Urban Land — Economic Activities Spaces',gp:'Espaços de Atividades Económicas',items:[
+   {en:'AE1 — Large or Medium-Scale Industrial',pt:'AE1 - Industrial de Grande ou Média Dimensão',code:'AE1',sw:{t:'fill',c:'#a33028'}},
+   {en:'AE2 — Large-Scale Commercial',pt:'AE2 - Comercial de Grande Dimensão',code:'AE2',sw:{t:'fill',c:'#e08a3a'}},
+   {en:'AE3 — Medium or Small-Scale Commercial',pt:'AE3 - Comercial de Média ou Pequena Dimensão',code:'AE3',sw:{t:'fill',c:'#f0c89a'}},
+   {en:'AE4 — Logistics',pt:'AE4 - Logística',code:'AE4',sw:{t:'fill',c:'#7a2420'}},
+   {en:'AE5 — Food & Drink (Restaurants / Beverages)',pt:'AE5 - Restauração ou Bebidas',code:'AE5',sw:{t:'grid',c:'#caa23a',fill:'#f3e6b8'}},
+  ]},
+  {g:'Urban Land — Green Spaces',gp:'Espaços Verdes',items:[
+   {en:'EV1 — Green Spaces for Collective Use',pt:'EV1 - Espaços Verdes de Utilização Coletiva',code:'EV1',sw:{t:'grid',c:'#3a8f4e',fill:'#bfe0b0'}},
+   {en:'EV2 — Buffer / Framing Green Spaces',pt:'EV2 - Espaços Verdes de Enquadramento',code:'EV2',sw:{t:'fill',c:'#6fc04e'}},
+   {en:'EV3 — Inner-Block Green Spaces',pt:'EV3 - Espaços Verdes de Interior de Quarteirão',code:'EV3',sw:{t:'grid',c:'#7ac24e',fill:'#d4ecc0'}},
+   {en:'EV4 — Protection Green Spaces (Watercourses or REN)',pt:'EV4 - Espaços Verdes de Proteção (Linhas de Água ou REN)',code:'EV4',sw:{t:'fill',c:'#cfe8c0'}},
+   {en:'EV5 — Private Yard / Garden Green Spaces',pt:'EV5 - Espaços Verdes de Logradouros Privados',code:'EV5',sw:{t:'fill',c:'#a8b84e'}},
+  ]},
+  {g:'Urban Land — Special-Use Space',gp:'Espaço de Uso Especial',items:[
+   {en:'UI1 — Facilities / Equipment',pt:'UI1 - Equipamentos',code:'UI1',sw:{t:'fill',c:'#f3e08a'}},
+   {en:'UI2 — Infrastructure',pt:'UI2 - Infraestruturas',code:'UI2',sw:{t:'fill',c:'#e0563a'}},
+  ]},
+  {g:'Urban Land — Low-Density Urban Spaces',gp:'Espaços Urbanos de Baixa Densidade',items:[
+   {en:'BD1 — Max. Utilization Index 0.5 m²/m²',pt:'BD1 - IU máximo 0.5 m2/m2',code:'BD1',sw:{t:'fill',c:'#8a5a2a'}},
+   {en:'BD2 — Max. Utilization Index 0.4 m²/m²',pt:'BD2 - IU máximo 0.4 m2/m2',code:'BD2',sw:{t:'fill',c:'#9a8a3a'}},
+  ]},
+ ]},
+];
+
+/* exclusions table data for page 2 */
+const EXCL={
+  caption:'Exclusions — areas removed from the REN (National Ecological Reserve)  ·  Exclusões',
+  head:['Excluded area (order no.)','Affected REN area','Intended purpose','Rationale'],
+  headPt:['Áreas Excluídas (n.º de ordem)','Áreas da REN Afetadas','Fim a que se Destina','Fundamentação'],
+  rows:[
+    ['C1','Maximum Infiltration Area','Residential Space','Urban Adjustment'],
+    ['C2','Reservoir Protection Strip','Economic Activities Space','Occupation with Economic Activities'],
+    ['C3','Reservoir Protection Strip','Economic Activities Space','Occupation with Economic Activities'],
+    ['C4','Reservoir Protection Strip','Economic Activities Space','Occupation with Economic Activities'],
+    ['C5','Reservoir Protection Strip','Residential Space','Urban Adjustment'],
+  ],
+  rowsPt:[
+    ['','Área de Infiltração Máxima','Espaço Residencial','Acerto Urbano'],
+    ['','Faixa de Proteção a Albufeira','Espaço de Atividades Económicas','Ocupação com Atividades Económicas'],
+    ['','Faixa de Proteção a Albufeira','Espaço de Atividades Económicas','Ocupação com Atividades Económicas'],
+    ['','Faixa de Proteção a Albufeira','Espaço de Atividades Económicas','Ocupação com Atividades Económicas'],
+    ['','Faixa de Proteção a Albufeira','Espaço Residencial','Acerto Urbano'],
+  ]
+};
+
+/* map reference metadata */
+const REF={
+  title:'Map Reference Data',
+  pt:'Identificação da Cartografia de Referência · Origem das Coordenadas',
+  items:[
+    ['Owner entity','Câmara Municipal de Braga','Entidade Proprietária'],
+    ['Producing entity','ARTOP, Aero-Topográfica, Lda.','Entidade Produtora'],
+    ['Edition date','August 2013','Data da Edição: 08/2013'],
+    ['Approval (homologation)','No. 173, 28-08-2013','Data e Nº da Homologação'],
+    ['Approval authority','Directorate-General for the Territory','Direção-Geral do Território'],
+    ['National cartographic series','1:10,000','Série Cartográfica Nacional'],
+    ['Projection system','Gauss Rectangular Projection — Hayford Ellipsoid','Projeção Retangular de Gauss'],
+    ['Reference system','Datum 73 / Hayford-Gauss; National Altimetric Datum (Cascais)','Sistema de Referência'],
+    ['Planimetric accuracy','RMS error 1.50 m','Exatidão Planimétrica: e.m.q. 1.50m'],
+    ['Altimetric accuracy','Spot heights, RMS error 1.80 m','Exatidão Altimétrica: P.C. e.m.q. 1.80m'],
+    ['Thematic accuracy','Better than 90%','Exatidão Temática: melhor que 90%'],
+    ['Nominal positional reproduction precision','2.2 m','Precisão Posicional Nominal de Reprodução: 2.2m'],
+    ['Coordinate origin — central point','φ 39° 40′ 00″ N · λ 8° 07′ 54.862″ W of Greenwich','Origem das Coordenadas - Ponto Central'],
+    ['False origin','M: +180,598 m · P: −86,990 m from the central point','Falsa Origem'],
+  ]
+};
+
+/* ---------- render ---------- */
+const main=document.getElementById('main');
+DATA.forEach(page=>{
+  const sec=document.createElement('section');
+  sec.className='page';sec.id=page.id;
+  sec.innerHTML=`<div class="page-head"><span class="page-num">${page.num}</span><h2 class="page-title">${page.title}</h2><span class="page-pt">${page.pt}</span></div>`;
+  page.groups.forEach(grp=>{
+    const gd=document.createElement('div');gd.className='group';
+    gd.innerHTML=`<p class="group-title">${grp.g}<span class="group-pt">${grp.gp}</span></p>`+
+      (grp.note?`<p class="note">${grp.note}</p>`:'')+`<div class="group-rule"></div>`;
+    const grid=document.createElement('div');grid.className='grid';
+    grp.items.forEach(it=>{
+      const row=document.createElement('div');row.className='item';
+      row.dataset.search=(it.en+' '+it.pt+' '+(it.code||'')).toLowerCase();
+      const sc=swatch(it.sw);
+      row.appendChild(sc);
+      const txt=document.createElement('div');
+      txt.innerHTML=`<div class="en">${it.en.replace(/^([A-Z][A-Za-z0-9]+) —/,'<span class="code">$1</span> —')}</div><div class="pt">${it.pt}</div>`;
+      row.appendChild(txt);
+      grid.appendChild(row);
+    });
+    gd.appendChild(grid);
+    sec.appendChild(gd);
+    /* insert exclusions table after ecological resources group on page 2 */
+    if(page.id==='p2' && grp.g==='Ecological Resources'){
+      const tw=document.createElement('div');tw.className='table-wrap';tw.dataset.search='exclusions exclusões ren infiltration reservoir';
+      let html=`<table><caption>${EXCL.caption}</caption><thead><tr>`;
+      EXCL.head.forEach((h,i)=>html+=`<th>${h}<span class="pt" style="display:block">${EXCL.headPt[i]}</span></th>`);
+      html+='</tr></thead><tbody>';
+      EXCL.rows.forEach((r,ri)=>{html+='<tr>';r.forEach((c,ci)=>{const ptc=EXCL.rowsPt[ri][ci];html+=`<td>${c}${ptc?`<span class="pt" style="display:block">${ptc}</span>`:''}</td>`;});html+='</tr>';});
+      html+='</tbody></table>';
+      tw.innerHTML=html;sec.appendChild(tw);
+    }
+  });
+  main.appendChild(sec);
+});
+
+/* reference card */
+const ref=document.createElement('div');ref.className='refcard';ref.id='ref';
+let rh=`<h2>${REF.title}</h2><span class="group-pt">${REF.pt}</span><dl class="ref-grid">`;
+REF.items.forEach(([t,v,pt])=>{rh+=`<div class="ref-item"><dt>${t}</dt><dd>${v}<span class="pt-inline">${pt}</span></dd></div>`;});
+rh+='</dl>';ref.innerHTML=rh;main.appendChild(ref);
+
+/* ---------- interactions ---------- */
+const search=document.getElementById('search');
+const empty=document.getElementById('empty');
+search.addEventListener('input',()=>{
+  const q=search.value.trim().toLowerCase();
+  let any=false;
+  document.querySelectorAll('section.page').forEach(sec=>{
+    let pageHit=false;
+    sec.querySelectorAll('.group').forEach(g=>{
+      let gHit=false;
+      g.querySelectorAll('.item').forEach(it=>{
+        const m=!q||it.dataset.search.includes(q);
+        it.classList.toggle('hidden',!m);
+        if(m)gHit=true;
+      });
+      g.classList.toggle('hidden',!gHit);
+      if(gHit)pageHit=true;
+    });
+    sec.querySelectorAll('.table-wrap').forEach(tw=>{
+      const m=!q||tw.dataset.search.includes(q);
+      tw.style.display=m?'':'none';if(m)pageHit=true;
+    });
+    sec.classList.toggle('hidden',!pageHit);
+    if(pageHit)any=true;
+  });
+  ref.style.display=(!q||'map reference coordinates braga datum projection'.includes(q))?'':'none';
+  empty.style.display=any?'none':'block';
+});
+
+const ptToggle=document.getElementById('ptToggle');
+ptToggle.addEventListener('click',()=>{
+  const off=document.body.classList.toggle('hide-pt');
+  ptToggle.classList.toggle('on',!off);
+  ptToggle.textContent='Portuguese: '+(off?'Off':'On');
+  ptToggle.setAttribute('aria-pressed',String(!off));
+});
+document.getElementById('printBtn').addEventListener('click',()=>window.print());
+</script>
+</body>
+</html>
